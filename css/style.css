@@ -1,0 +1,293 @@
+/**
+ * fil: css/style.css
+ **/
+ /**google fonts (som noget det første)*/
+ @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Libre+Franklin:wght@700;900&display=swap');
+
+:root {
+  /* farver */
+  --white: #ffffff;
+  --black: #000000;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+
+}
+
+.logo-box img {
+    height: 60px;
+    padding-left: 30px;
+
+}
+
+.logomenu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+
+}
+
+
+/* Layout */
+#wrap {
+  width: 100%;
+  height: 100%;
+  max-height: 864px;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  }
+
+#galleri {
+  width: 100%;
+  margin:auto
+  border: 10px solid var(--white);
+  margin: 11px;
+}
+
+header {
+  /*height: 300px;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  /*border: 2px solid red;*/
+  /*width: 100%;*/
+  background-color: white;
+  }
+/* Typografi */
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+h2 {
+
+}
+
+.artikelside {
+margin: auto;
+max-width: 1000px;
+display: grid;
+grid-template-columns: auto 1fr auto;
+grid-gap: .5em;
+}
+
+h1, img, main {
+  grid-column: 2;
+}
+
+main {
+font-family: 'Josefin Sans', sans-serif;
+width: 100%;
+margin: auto;
+text-align: justify;
+
+
+}
+
+.artikelside img {
+width: 100%;
+padding-bottom: 20px;
+
+
+}
+
+.artikelside p {
+font-size: 1.5em;
+line-height: 1.5em;
+padding-bottom: 20px;
+}
+
+.artikelside h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 2em;
+
+}
+
+
+.artikelside h1 {
+  width: 100%;
+  display: block;
+  font-size: 3em;
+
+  padding-top: 50px;
+}
+
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+#nrEt {
+  color: var(--red);
+  font-family: fantasy;
+
+}
+
+.bgimg {
+  background-image: url(../images/Magasinbg2.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.titel h1  {
+  padding-top: 15%;
+  padding-left: 10%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.titel p {
+  padding-top: 20px;
+  padding-left: 10%;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5em;
+}
+
+
+
+/*Navigation*/
+ nav ul {
+  list-style-type:none; /*Fjern kugler*/
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+
+ nav ul li a {
+    display:block;
+    padding: .5em 1em;
+    margin: .5em;
+    text-decoration: none;
+    color: black;
+    }
+ nav ul li ul {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    }
+
+ nav ul li ul li a:hover {
+    background-color: #f3f3f3;
+  }
+
+
+/* med et undermenu-niveau */
+    .submenu { display: none; }
+    .dropmenu>li:hover>.submenu { display: block; }
+
+/*Artikler*/
+
+ .sitecontainer {
+margin: 7rem auto;
+max-width: calc(100% - 80px);
+
+}
+
+.articlecontainer {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+gap: 5rem;
+
+}
+
+.articleimage {
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+.articleimage img {
+max-width: 100%;
+height: auto;
+
+}
+
+.articlecard {
+background: white;
+transition: 0.3s;
+}
+
+
+.articlecard:hover {
+box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
+cursor: pointer;
+}
+
+.articlecontent {
+font-family: 'Josefin Sans', sans-serif;
+padding: 2rem;
+}
+
+.articlecontent .cardcategory {
+font-size: 0.875rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: 600;
+color: red;
+display: block;
+text-decoration: none;
+}
+
+.articlecontent .cardtitle {
+font-family: 'Josefin Sans', sans-serif;
+margin: 1rem 0;
+color: black
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .logo-box {
+    display: block;
+    text-align: center;
+    padding-right: 60px;
+
+    }
+
+    .dropmenu {
+      display: grid;
+      text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+  .sitecontainer {
+    max-width: 608px;
+    }
+    .articlecard {
+      display: grid;
+      grid-template-rows: 220px 1fr;
+    }
+  }
+
+@media screen and (min-width: 1280px) {
+  .sitecontainer {
+    max-width: 1156px;
+    }
+  }
